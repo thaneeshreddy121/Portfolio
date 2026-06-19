@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolia</title>
+  <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+padding:20px 60px;
+    background:#0f9d58;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+.nav-links a:hover{
+    color:#ffd700;
+}
+section{
+    min-height:100vh;
+    padding:120px 80px 80px;
+}
+.container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    gap:50px;
+}
+
+.text{
+    flex:1;
+}
+
+.text h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.text h1 span{
+    color:#0f9d58;
+}
+
+.text h2{
+    font-size:28px;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.text p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.im{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.im img{
+    width:350px;
+    height:450px;
+    object-fit:cover;
+    border-radius:20px;
+    border:5px solid #0f9d58;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Section Headings */
+section h1{
+    text-align:center;
+    font-size:40px;
+    color:#0f9d58;
+    margin-bottom:40px;
+}
+
+section h2{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+#About ul{
+    margin-top:20px;
+    margin-left:30px;
+}
+
+#About li{
+    margin-bottom:10px;
+}
+
+/* Cards */
+.project-card,
+.service,
+.edu-card,
+.exp-card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project-card:hover,
+.service:hover,
+.edu-card:hover,
+.exp-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Services Grid */
+#services{
+    background:#eef7f1;
+}
+
+.service{
+    margin-bottom:20px;
+}
+
+/* Education */
+#education{
+    background:#fafafa;
+}
+
+/* Experience */
+#experience{
+    background:#f0f8ff;
+}
+
+/* Contact */
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+/* Footer */
+footer{
+    background:#0f9d58;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:18px;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        margin-top:10px;
+        gap:15px;
+    }
+
+    .container{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding-top:80px;
+    }
+
+    .im img{
+        width:250px;
+        height:320px;
+    }
+
+    .text h1{
+        font-size:32px;
+    }
+
+    .text h2{
+        font-size:22px;
+    }
+
+    section{
+        padding:100px 25px 50px;
+    }
+
+    section h1{
+        font-size:30px;
+    }
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#0f9d58;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0b7d45;
+    transform:translateY(-3px);
+}
+
+  </style>
+
+  </head>
+
+  <body>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+<div id="home">
+<div class="container">
+<div class="text">
+<h1>Hi, I'm <span>Venna Venkata Thaneesh Reddy</span></h1>
+
+    <h2>Frontend Web Developer</h2>
+
+    <p>
+        I am a passionate web developer with a strong interest in
+        creating modern, responsive, and user-friendly websites.
+        I enjoy turning ideas into interactive digital experiences
+        using HTML, CSS, JavaScript, and other web technologies.
+    </p>
+
+    <p>
+        I am constantly learning new skills and working on projects
+        that help me grow as a developer. My goal is to build
+        applications that are both functional and visually appealing.
+    </p>
+
+<div class="buttons">
+    <a href="resume.pdf" target="_blank" class="btn">
+        View Resume
+    </a>
+</div>
+
+</div>
+<div class="im">
+  <img src="pic.png" alt="not availabe">
+</div>
+</div>
+</div>
+
+<section id="About">
+    <h1>About Me</h1>
+
+    <p>
+        Hello! I'm <b>Venna Venkata Thaneesh Reddy</b>, an aspiring
+        AI & Machine Learning Engineer and Frontend Web Developer.
+        I am currently pursuing B.Tech in Computer Science Engineering
+        (Artificial Intelligence & Machine Learning) at Lakireddy Bali
+        Reddy College of Engineering.
+    </p>
+
+    <p>
+        I have a strong foundation in Java, Python, SQL, HTML, CSS,
+        and JavaScript. I enjoy developing responsive websites and
+        learning modern technologies that improve user experiences.
+    </p>
+
+    <p>
+        During my academic journey, I have worked on web development,
+        machine learning concepts, and IoT-based projects. My goal is
+        to become a skilled software engineer who can contribute to
+        innovative and impactful technology solutions.
+    </p>
+
+    <h2>My Skills</h2>
+    <ul>
+        <li>Java Programming</li>
+        <li>Python Programming</li>
+        <li>SQL & Database Management</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Machine Learning</li>
+        <li>Problem Solving</li>
+        <li>Team Collaboration</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h1>Projects</h1>
+
+    <div class="project-card">
+        <h2>Sustainable Development Awareness Website</h2>
+
+        <p>
+            Developed a static website to create awareness about
+            Sustainable Development Goals (SDGs). The project was
+            designed using HTML and CSS with a focus on responsive
+            design and user-friendly navigation.
+        </p>
+
+        <h3>Technologies Used</h3>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+        </ul>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li>Responsive layout for different devices</li>
+            <li>Interactive and clean user interface</li>
+            <li>Well-organized content structure</li>
+            <li>Awareness about sustainability goals</li>
+        </ul>
+    </div>
+</section>
+<section id="services">
+    <h1>Services</h1>
+
+    <div class="service">
+        <h2>Frontend Development</h2>
+        <p>
+            Building responsive and attractive websites using HTML,
+            CSS, and JavaScript.
+        </p>
+    </div>
+
+    <div class="service">
+        <h2>Java Development</h2>
+        <p>
+            Developing console-based and object-oriented applications
+            using Java.
+        </p>
+    </div>
+
+    <div class="service">
+        <h2>Database Management</h2>
+        <p>
+            Designing and managing databases using SQL and relational
+            database concepts.
+        </p>
+    </div>
+
+    <div class="service">
+        <h2>Machine Learning</h2>
+        <p>
+            Creating basic machine learning models and data analysis
+            solutions using Python.
+        </p>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education">
+    <h1>Education</h1>
+
+    <div>
+        <h2>B.Tech - CSE (AI & ML)</h2>
+        <p>Lakireddy Bali Reddy College of Engineering</p>
+    </div>
+
+    <div>
+        <h2>Diploma in Computer Engineering</h2>
+        <p>Dhanekula Institute of Engineering and Technology</p>
+        <p>Percentage: 93%</p>
+    </div>
+
+    <div>
+        <h2>SSC</h2>
+        <p>Sri Chaitanya Techno School</p>
+        <p>Percentage: 90%</p>
+    </div>
+</section>
+<section id="experience">
+    <h1>Experience</h1>
+
+    <h2>Industrial Training - Microlink</h2>
+
+    <p>
+        Successfully completed 6 months of industrial training at
+        Microlink, where I gained practical experience in designing
+        Printed Circuit Boards (PCBs) and developing IoT products.
+    </p>
+
+    <p>
+        Worked with sensors, electronic components, and hardware
+        integration while improving teamwork and problem-solving skills.
+    </p>
+</section>
+<section id="contact">
+    <h1>Contact Me</h1>
+
+    <p>
+        I am open to internships, entry-level opportunities, and
+        collaborative projects. Feel free to contact me.
+    </p>
+
+    <h3>Phone</h3>
+    <p>+91 9121850293</p>
+
+    <h3>Email</h3>
+    <p>thaneeshreddy1222@gmail.com</p>
+
+    <h3>Languages Known</h3>
+    <p>English, Telugu, Hindi</p>
+</section>
+</body>
+<footer> @copyrights reserver to the oda sensi</footer>
+
+  </body>
+  </html>
